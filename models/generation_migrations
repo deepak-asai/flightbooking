@@ -1,0 +1,5 @@
+npx sequelize-cli model:generate --name Users  --attributes id:integer,name:string,email:string
+npx sequelize-cli model:generate --name AirportCodes  --attributes id:integer,name:string,code:string,country:string,time_zone:string
+npx sequelize-cli model:generate --name AirlineCompanies  --attributes id:integer,name:string,code:string,country:string,time_zone:string
+
+npx sequelize-cli model:generate --name Flights  --attributes id:integer,airline_company_id:integer,flight_number:string,source_airport_id:integer,destination_airport_id:integer,sceduled_departure_time:time,scheduled_arrival_time:time,frequency:string,economy_base_fare_adult:decimal,economy_base_fare_child:decimal,economy_base_fare_infant:decimal,premium_economy_base_fare_adult:decimal,premium_economy_base_fare_child:decimal,premium_economy_base_fare_infant:decimal
