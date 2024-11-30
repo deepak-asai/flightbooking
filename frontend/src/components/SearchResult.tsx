@@ -1,18 +1,18 @@
-import { useState } from "react";
-
-interface SearchResultProps {
+export interface Place {
   code: string;
   airport: string;
   city: string;
 }
 
-function SearchResult({ code, airport, city }: SearchResultProps) {
+function SearchResult({ code, airport, city }: Place) {
   return (
-    <div className="search-result flex-container">
-      <div>{code}</div>
-      <div>
-        <div>{airport}</div>
-        <div>{city}</div>
+    <div className="search-result flex items-start">
+      <span className="bg-neutral-100 text-sm rounded-xl px-sm py-xs">
+        {code}
+      </span>
+      <div className="ml-sm text-left">
+        <div className="text-sm">{airport}</div>
+        <div className="text-xs">{city}</div>
       </div>
     </div>
   );
